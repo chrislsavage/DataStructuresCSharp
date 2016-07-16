@@ -1,0 +1,6 @@
+.vscode/*
+bin/*
+obj/*
+project.json
+project.lock.json
+Program.cs
