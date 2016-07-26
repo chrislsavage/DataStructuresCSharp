@@ -71,14 +71,37 @@ namespace LinkedList {
             System.Threading.Thread.Sleep(1500);
         }
 
-        public void addHead(Node node)
+        public void eleSearch()  //need to fix
         {
-            head = node;
+            Console.WriteLine("What value are you looking for?");
+            int searchVal = Convert.ToInt32(Console.ReadLine());
+            int nodeNumber = 1;
+            if (head != null)
+            {
+                Node temp = head;
+                while (temp.info != searchVal || temp != null)
+                {
+                    temp = temp.next;
+                    nodeNumber++;
+                }
+                if (temp != null)
+                {
+                    Console.WriteLine($"The node with the value:{searchVal} is node number {nodeNumber}.");
+                }
+                else
+                {
+                    Console.WriteLine("There is not a node with the requested value. Try another?");
+                }
+            }
         }
 
-        public void addToBeginning(Node node)
+        public void addToBeginning()
         {
-            node.next = head;
+            Node node = createNode();
+            if (head.next != null)
+            {
+                node.next = head;
+            }
             head = node;
         }
 
@@ -99,11 +122,12 @@ namespace LinkedList {
             Console.WriteLine($"There are {counter} nodes in your List");
             System.Threading.Thread.Sleep(1500);
         }
-        public void addToEnd(Node node)
+        public void addToEnd()
         {
+            Node node = createNode();
             if (head == null)
             {
-                addHead(node);
+                addToBeginning();
             }
             else
             {
@@ -114,6 +138,13 @@ namespace LinkedList {
                 }
                 temp.next = node;
             }
+        }
+
+        public Node createNode()
+        {
+            Console.WriteLine("What value would you like your node to have?");
+            Node node = new Node(Convert.ToInt32(Console.ReadLine()));
+            return node;
         }
     }
 }

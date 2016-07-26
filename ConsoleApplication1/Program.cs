@@ -24,7 +24,7 @@ namespace LinkedList
                 Console.WriteLine("Enter Element to Be inserted:");
                 Console.WriteLine("1) Display List");
                 Console.WriteLine("2) Count The Number of Nodes");
-                Console.WriteLine("3) Search for an element");
+                Console.WriteLine("3) Search for an element by it's value");
                 Console.WriteLine("4) Insert in Empty List/ Insert at beginning of list");
                 Console.WriteLine("5) Insert Node at End of List");
                 Console.WriteLine("6) Insert a Node after specified Node");
@@ -54,6 +54,15 @@ namespace LinkedList
                         break;
                     case 2:
                         list.countNodes();
+                        break;
+                    case 3:
+                        list.eleSearch();
+                        break;
+                    case 4:
+                        list.addToBeginning();
+                        break;
+                    case 5:
+                        list.addToEnd();
                         break;
                 }
                 Console.WriteLine();
