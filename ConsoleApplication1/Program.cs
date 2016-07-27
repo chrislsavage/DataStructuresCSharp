@@ -27,8 +27,8 @@ namespace LinkedList
                 Console.WriteLine("3) Search for an element by it's value");
                 Console.WriteLine("4) Insert in Empty List/ Insert at beginning of list");
                 Console.WriteLine("5) Insert Node at End of List");
-                Console.WriteLine("6) Insert a Node after specified Node");
-                Console.WriteLine("7) Insert a node before a specified Node");
+                Console.WriteLine("6) Insert a Node after specified Node position");
+                Console.WriteLine("7) Insert a node before a specified Node position");
                 Console.WriteLine("8) Insert a node at a given posiion");
                 Console.WriteLine("9) Delete First Node");
                 Console.WriteLine("10) Delete Last Node");
@@ -63,6 +63,24 @@ namespace LinkedList
                         break;
                     case 5:
                         list.addToEnd();
+                        break;
+                    case 6:
+                        list.insertAfterPostion();
+                        break;
+                    case 7:
+                        list.insertBeforePostion();
+                        break;
+                    case 8:
+                        list.insertAtPosition();
+                        break;
+                    case 9:
+                        list.deleteHead();
+                        break;
+                    case 10:
+                        list.deleteLastNode();
+                        break;
+                    case 11:
+                        list.deleteAnyNode();
                         break;
                 }
                 Console.WriteLine();
